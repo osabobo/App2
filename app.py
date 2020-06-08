@@ -5,7 +5,7 @@ import numpy as np
 import pickle
 
 app=Flask(__name__)
-model=load_model('deployment_28042020')
+model=load_model('deployment')
 cols=['age','sex','bmi','children','smoker','region']
 
 
@@ -20,7 +20,7 @@ def predict():
     dat_useen=pd.DataFrame([final_features],columns=cols)
     prediction = predict_model(model,data=dat_useen,round=0)
     prediction = int(prediction.Label[0])
-    return render_template("home.html", prediction_text='Price should be $ {}'.format(prediction))
+    return render_template("home.html", prediction_text='charge should be $ {}'.format(prediction))
 
 
 

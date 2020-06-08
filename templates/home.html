@@ -2,15 +2,14 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Predict Insurance Bill</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
-
+    <title>Insurance Forecasting</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
  <div class="login">
 	<h1>Predict Insurance Bill</h1>
@@ -21,18 +20,19 @@
     	<input type="text" name="sex" placeholder="Sex" required="required" /><br>
         <input type="text" name="bmi" placeholder="BMI" required="required" /><br>
         <input type="text" name="children" placeholder="Children" required="required" /><br>
-        <input type="text" name="smoker" placeholder="Smoker" required="required" /><br>
+        <input type="text" name="smoker" placeholder="Smoker" required="required" /><small id="SMHELP" class="form-text text-muted">Enter yes or no</small>
+
         <input type="text" name="region" placeholder="Region" required="required" /><br>
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
+     <div>
+      {{ prediction_text }}
+       </div>
 
-   <br>
-   <br>
+        </div>
 
 
- </div>
- {{pred}}
+
 
 </body>
 </html>
