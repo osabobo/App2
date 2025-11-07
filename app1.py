@@ -25,7 +25,7 @@ def groq_predict(age, sex, bmi, children, smoker, region):
     """
 
     response = client.chat.completions.create(
-        model="mixtral-8x7b-32768",  # Fast, reasoning-capable LLM
+        model="llama-3.3-70b-versatile",  # Fast, reasoning-capable LLM
         messages=[{"role": "user", "content": prompt}],
         temperature=0.3
     )
