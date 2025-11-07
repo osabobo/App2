@@ -60,7 +60,7 @@ def main():
     if st.button("🔮 Predict Insurance Charge"):
         with st.spinner("Estimating using Groq LLM..."):
             result = groq_predict(age, sex, bmi, children, smoker, region)
-        st.success(f"💵 Estimated Charge: ₦{result}")
+        st.success(f"💵 Estimated Charge: {result}")
 
     st.caption("⚙️ Powered by Groq LLM • Built with Streamlit")
 
