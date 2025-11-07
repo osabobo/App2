@@ -40,7 +40,7 @@ def main():
     st.set_page_config(page_title="Insurance Charge Predictor (Groq LLM)", page_icon="💰", layout="centered")
 
     st.title("💰 Health Insurance Charge Predictor")
-    st.markdown("This app uses a **Groq large language model** to estimate insurance costs based on user details.")
+    st.markdown("This app uses a  estimate insurance costs based on user details.")
     st.divider()
 
     # User inputs
