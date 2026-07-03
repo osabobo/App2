@@ -25,7 +25,7 @@ def groq_predict(age, sex, bmi, children, smoker, region):
     """
 
     response = client.chat.completions.create(
-        model="GPT OSS 120B",  # Fast, reasoning-capable LLM
+        model="openai/gpt-oss-120b",  # Fast, reasoning-capable LLM
         messages=[{"role": "user", "content": prompt}],
         temperature=0.3
     )
